@@ -9,6 +9,7 @@ public class Stage1Scene_TryAgainButtonScript : MonoBehaviour
 {
     public void OnMouseDownTryAgain()
     {
+        Stage1Scene_SceneParameter.isTryAgain = true;
         SceneManager.LoadScene("Stage1Scene/Scene");
     }
 }

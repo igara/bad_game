@@ -66,7 +66,7 @@ public class Stage1Scene_PointScript : MonoBehaviour
         bool isLeftUp = Input.GetMouseButtonUp(0);
 
         // 左クリック / スマホのタップされていたら実行
-        if (newItem != null && isNext && isLeftUp)
+        if (!Stage1Scene_SceneParameter.isTryAgain && newItem != null && isNext && isLeftUp)
         {
             isNext = false;
             newItem.GetComponent<Rigidbody2D>().isKinematic = false;
@@ -75,6 +75,11 @@ public class Stage1Scene_PointScript : MonoBehaviour
             CreateNewItem();
 
             StartCoroutine(ChangeIsNextCoroutine());
+        }
+
+        if (isLeftUp)
+        {
+            Stage1Scene_SceneParameter.isTryAgain = false;
         }
     }
 
