@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Video;
@@ -21,6 +22,9 @@ public class Stage1Scene_PointScript : MonoBehaviour
 
     [SerializeField]
     private GameObject movie;
+
+    [SerializeField]
+    private TMP_Text countText;
 
     private bool isNext = true;
 
@@ -94,6 +98,8 @@ public class Stage1Scene_PointScript : MonoBehaviour
         newItem.GetComponent<Rigidbody2D>().isKinematic = true;
         newItem.GetComponent<PolygonCollider2D>().enabled = false;
         genItems.Add(newItem);
+
+        countText.text = genItems.Count.ToString();
     }
 
     private IEnumerator ChangeIsNextCoroutine()
