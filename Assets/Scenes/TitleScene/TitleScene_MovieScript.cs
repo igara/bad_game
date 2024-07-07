@@ -16,6 +16,8 @@ public class TitleScene_MovieScript : MonoBehaviour
     [SerializeField]
     private AudioSource bgm;
 
+    private bool isSkip = false;
+
     void Awake()
     {
         canvas.SetActive(false);
@@ -32,5 +34,17 @@ public class TitleScene_MovieScript : MonoBehaviour
     {
         canvas.SetActive(true);
         bgm.Play();
+    }
+
+    void Update()
+    {
+        if (!isSkip && Input.GetMouseButtonUp(0))
+        {
+            isSkip = true;
+            videoPlayer.Pause();
+
+            canvas.SetActive(true);
+            bgm.Play();
+        }
     }
 }

@@ -60,7 +60,7 @@
                     </row>
                 </effect>
             </clip>
-            <clip id="2" enabled="1" name="Title.png" clipin="0" in="179" out="222" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="1" stream="0">
+            <clip id="1" enabled="1" name="Title.png" clipin="-17" in="162" out="222" track="-1" r="192" g="160" b="128" autoscale="0" speed="1.0000000000" maintainpitch="0" reverse="0" type="0" media="1" stream="0">
                 <linked/>
                 <effect name="Distort/Transform" enabled="1">
                     <row>
@@ -82,7 +82,7 @@
                         <field id="anchory" value="0"/>
                     </row>
                     <row>
-                        <field id="opacity" value="100"/>
+                        <field id="opacity" value="0"/>
                     </row>
                     <row>
                         <field id="blendmode" value=""/>
